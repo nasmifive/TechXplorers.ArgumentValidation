@@ -14,7 +14,7 @@ void GetProductAccess(int? id, string name)
 	    .AndThat(() => name).IsNotWhitespace();
 	    
 
-    //....
+	//....
 }
 
 /*
