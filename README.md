@@ -6,9 +6,13 @@ Sample Usage:
 void GetProductAccess(int? id, string name)
 
 {
+    
     Check
+    
 	    .That(() => id).When(It.HasValue).IsGreaterThan(0)
+	    
 	    .AndThat(() => name).IsNotWhitespace();
+	    
 
     //....
 }
