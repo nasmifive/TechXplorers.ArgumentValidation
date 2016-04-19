@@ -4,6 +4,7 @@ Fluent method argument validation utility
 Sample Usage:
 
 void GetProductAccess(int? id, string name)
+
 {
     Check
 	    .That(() => id).When(It.HasValue).IsGreaterThan(0)
