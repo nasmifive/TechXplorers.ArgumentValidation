@@ -3,7 +3,7 @@ Fluent method argument validation utility
 
 Sample Usage:
 
-void GetProductAccess(int? id, string name)
+void Foo(int? id, string name)
 
 {
     
