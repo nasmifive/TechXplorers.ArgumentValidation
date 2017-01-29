@@ -220,5 +220,36 @@ namespace TechXplorers.ArgumentValidation
 
 		//    return dictionary[key];
 		//}
+		
+		public static IEnumerable<T> Intersperse<T>(this IEnumerable<T> source, T with)
+		{
+			source.ThrowIfNull(nameof(source));
+
+			var first = true;
+			foreach (var item in source)
+			{
+				if (!first)
+					yield return with;
+				yield return item;
+				first = false;
+			}
+		}
+		
+		public static T Clamp<T>(this T value, T between, T and)
+			where T : IComparable
+		{
+			if (value == null || between == null || and == null)
+				return value;
+
+			var min = between.CompareTo(and) < 0 ? between : and;
+			var max = between.CompareTo(and) > 0 ? between : and;
+
+			if (value.CompareTo(min) < 0)
+				return min;
+			if (value.CompareTo(max) > 0)
+				return max;
+
+			return value;
+		}
 	}
 }
