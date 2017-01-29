@@ -251,5 +251,50 @@ namespace TechXplorers.ArgumentValidation
 
 			return value;
 		}
+		
+		//[TestMethod]
+		//public void GivenInvokedThenReturnInterspersedCollection()
+		//{
+		//	var collection = new[] {1, 2, 3, 4, 5, 6};
+		//	var expected = new[] { 1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6 };
+		//	var result = collection.Intersperse(with: 0).ToArray();
+		//	CollectionAssert.AreEqual(expected, result);
+		//}
+
+		//[TestMethod]
+		//public void GivenInvokedWithNullValueToIntersperseThenIntersperseNull()
+		//{
+		//	var collection = new[] { "one", "two", "three", "four" };
+		//	var expected = new[] { "one", null, "two", null, "three", null, "four" };
+		//	var result = collection.Intersperse(with: null).ToArray();
+		//	CollectionAssert.AreEqual(expected, result);
+		//}
+
+		//[TestMethod]
+		//public void GivenInvokedOnEmptyCollectionThenDoNotIntersperse()
+		//{
+		//	var collection = Enumerable.Empty<int>();                                   
+		//	var expected = Enumerable.Empty<int>().ToArray();
+
+		//	var result = collection.Intersperse(with: 1).ToArray();
+		//	CollectionAssert.AreEqual(expected, result);
+		//}
+
+		//[TestMethod]
+		//public void GivenInvokedOnSingleItemCollectionThenDoNotIntersperse()
+		//{
+		//	var collection = new[] { 10 };
+		//	var expected = new[] { 10 };
+
+		//	var result = collection.Intersperse(with: 99).ToArray();
+		//	CollectionAssert.AreEqual(expected, result);
+		//}
+
+		//[TestMethod]
+		//public void GivenInvokedOnNullCollectionThenThrowException()
+		//{
+		//	IEnumerable<int> collection = null;
+		//	Throws<ArgumentNullException>(() => collection.Intersperse(with: 0));
+		//}
 	}
 }
